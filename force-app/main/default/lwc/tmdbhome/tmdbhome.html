@@ -1,0 +1,26 @@
+<template>
+    <div class="movie-grid">
+        <template if:true={movies}>
+            <template for:each={movies} for:item="movie">
+                <div key={movie.id} class="movie-card">
+
+                    <div class="formatted-rich-text-container">
+                        <lightning-formatted-rich-text value={movie.Poster__c}></lightning-formatted-rich-text>
+                    </div>
+   
+                    <div class="movie-title">
+                        <h2>{movie.Name}</h2>
+                    </div>
+                </div>
+            </template>
+        </template>
+    </div>
+
+
+    <div class="botton-div">
+        <button class="movie-btn" onclick={handleclickPrevious}>{previous}</button>
+        <button class="movie-btn">{PageNo}</button>
+        <button class="movie-btn" onclick={handleclickNext}>{next}</button>
+    </div>
+</template>
+ 
