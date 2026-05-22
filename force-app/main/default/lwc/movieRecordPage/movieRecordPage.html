@@ -1,0 +1,13 @@
+<template>
+    <div class="container">
+        <template if:true={movie}>
+        <div class="movie-poster">
+            <lightning-formatted-rich-text value={movie.Poster__c}></lightning-formatted-rich-text>
+        </div>
+
+        <div class="movie-trailer">
+            <iframe width="560" height="315" src={movie.Trailer__c} allowfullscreen></iframe>
+        </div>
+        </template>
+    </div>
+</template>  

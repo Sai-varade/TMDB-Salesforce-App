@@ -1,3 +1,58 @@
+.Search-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+}
+.Search-box {
+    width: 50%;
+    display: flex;         
+    justify-content: center;
+    align-items: center;   
+    height: 3rem;
+    border-radius: 1rem;    
+    padding: 0.5rem;
+    background-color: white;   
+    color: black;
+}
+.searchText{
+    justify-content: center;
+    display: flexbox;
+    align-items: center;
+    font-size: 0.7rem;
+    margin-right: 0.5rem;
+    color: black;
+}
+.t{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d{
+    font-size: 1.75rem;
+}
+.inputText{
+    width: 100%;
+    border: none;
+    margin-left: 0.3rem;
+    font-size: 1rem;
+}
+.inputText:focus {
+    outline: none;
+    border: none;
+}
+
+.searchlogo{
+    justify-content: center;
+    display: flex;
+    align-items: start;
+    font-size: 1.7rem;
+}
+.search-result {
+    margin-top: 5px;       
+    cursor: pointer;
+}
+
 
 .movie-grid {
     display: grid;

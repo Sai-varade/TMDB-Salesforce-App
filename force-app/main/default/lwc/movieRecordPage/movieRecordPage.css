@@ -1,0 +1,44 @@
+.container{
+    padding-top: 1rem;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    gap: 20px;
+    border-radius: 20px;
+}
+
+.movie-poster{
+    width: 30%;
+    height: 80%;
+    background-color: aliceblue;
+    object-fit: cover;
+    position: relative;
+     overflow: hidden;
+    border-radius: 2rem;
+
+}
+lightning-formatted-rich-text{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 2rem;
+    border: none;
+}
+.movie-trailer{
+    width: 60%;
+    height: 80%;
+    border-radius: 2rem;
+    background-color: aliceblue;
+
+
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: none;
+}

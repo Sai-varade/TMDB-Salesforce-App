@@ -1,8 +1,31 @@
 <template>
+
+        <div class="Search-div">
+            <div class="Search-box">
+                <div class="searchText">
+                    <p class="t">Search</p>
+                    <p class="t">By ⏷</p>
+                </div>
+                <p class="d">|</p>
+                <input  class="inputText" type="text" placeholder="Search Here..."  onchange={Handlechnage}>
+                <p class="searchlogo">🔍︎</p>
+            </div >
+            <template if:true={searchResult}>
+            <template for:each={searchResults} for:item="result">
+                <div key={result.Id} data-id={result.Id} onclick={movieRecordPage} class="search-result">
+                    <p >{result.Name}</p>
+                </div>
+            </template>
+        </template>
+        </div>
+
+
+        
+        
     <div class="movie-grid">
         <template if:true={movies}>
             <template for:each={movies} for:item="movie">
-                <div key={movie.id} class="movie-card">
+                <div key={movie.Id} data-id={movie.Id} onclick={movieRecordPage} class="movie-card">
 
                     <div class="formatted-rich-text-container">
                         <lightning-formatted-rich-text value={movie.Poster__c}></lightning-formatted-rich-text>
