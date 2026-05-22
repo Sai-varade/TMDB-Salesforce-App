@@ -27,12 +27,12 @@ export default class AiSummaryC extends LightningElement {
 
 
     handleRefresh(){
-
+        this.Summary = '';
         getSummary({recordId: this.recordId}).then(result => {
             
             this.Summary = result;
         }).catch(error => {
-            this.Summary = 'Failed to load summary imperrative. Error: ' + error.body.message;
+            this.Summary = 'Failed to load summary . Error: ' + error.body.message;
         });
     
     }

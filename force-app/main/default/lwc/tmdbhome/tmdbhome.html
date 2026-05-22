@@ -11,11 +11,13 @@
                 <p class="searchlogo">🔍︎</p>
             </div >
             <template if:true={searchResult}>
+                <div class="searchResult">
             <template for:each={searchResults} for:item="result">
                 <div key={result.Id} data-id={result.Id} onclick={movieRecordPage} class="search-result">
                     <p >{result.Name}</p>
                 </div>
             </template>
+            </div>
         </template>
         </div>
 

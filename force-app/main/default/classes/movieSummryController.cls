@@ -17,8 +17,8 @@ public class movieSummryController {
             }
         }
 
-        if (movie.Summary_Update__c != true){
-            return movie.Summary__c+' Summary is up to date.'; 
+        if (movie.Summary_Update__c != true && movie.Summary__c != null) {
+            return movie.Summary__c; 
         }
 
         String summary = aiSummaryClass.getMovieSummary(movie.Name, allReviews, Rating);

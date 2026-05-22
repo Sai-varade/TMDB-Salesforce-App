@@ -6,7 +6,7 @@
                 <p>{Summary}</p>
             </template>
             <template if:false={Summary}>
-                <p>Loading...</p>
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
             </template>
             <div class="btn-div">
                 <lightning-button label="Refresh" onclick={handleRefresh}></lightning-button>

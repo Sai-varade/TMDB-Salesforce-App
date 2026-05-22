@@ -11,7 +11,7 @@ public class aiSummaryClass {
     public class Content {
         public List<Part> parts;
     }
-
+    
     public class Part {
         public String text;
     }
@@ -30,24 +30,11 @@ public class aiSummaryClass {
         
         if (res.getStatusCode() == 200) {
 
-            GeminiResponse responseObj =
-                (GeminiResponse) JSON.deserialize(
-                    res.getBody(),
-                    GeminiResponse.class
-                );
-
+            GeminiResponse responseObj = (GeminiResponse) JSON.deserialize(res.getBody(),GeminiResponse.class);
             String summary = responseObj.candidates[0].content.parts[0].text;                
             return summary;
-
         } else {
-
             return 'Error: ' + res.getStatusCode() + ' - ' + res.getStatus();
         }
-        
     }
-
-
-
 }
-
-

@@ -53,6 +53,11 @@ export default class Tmdbhome extends NavigationMixin(LightningElement) {
     }
 
     Handlechnage(event){
-        
+        this.searchValue = event.target.value;
+        if(this.searchValue.length > 0){
+            this.searchResults = this.movies.filter(movie => movie.Title__c.toLowerCase().includes(this.searchValue.toLowerCase()));
+        } else {
+            this.searchResults = ['Sainath'];
+        }
     }
 }
